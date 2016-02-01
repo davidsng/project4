@@ -24098,8 +24098,6 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	_TweetActions2.default.getAllTweets(); // we need to invoke the action at the start
-	
 	// this getAppState returns the state of app. Thus we can call this function in our this.state and in _onChange's this.setState to set the initial state in every cycle
 	var getAppState = function getAppState() {
 	  return { tweetsList: _TweetStore2.default.getAll() };
@@ -24121,6 +24119,7 @@
 	  _createClass(Index, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
+	      _TweetActions2.default.getAllTweets(); // we need to invoke the action at the start
 	      // Need to use componentDidMount to trigger the live load of tweets when the component is mounted
 	      // Essentially, "this.onChange" is passed into TweetStore's "addChangeListener" function
 	      _TweetStore2.default.addChangeListener(this._onChange);

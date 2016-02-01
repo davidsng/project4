@@ -19,7 +19,11 @@ class User < ActiveRecord::Base
   end
 
   def self.who_to_follow(current_user_id)
-    where(['id != ?', current_user_id])
+    where(["id != :current_user_id and not exists (
+      select 1 from followers
+      where user_id = users.id
+      and followed_by = :current_user_id
+      )", { current_user_id: current_user_id}])
     .order('random()').all
   end
 

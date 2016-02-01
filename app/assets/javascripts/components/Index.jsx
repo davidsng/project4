@@ -6,7 +6,6 @@ import TweetStore from '../stores/TweetStore'
 import TweetActions from '../actions/TweetActions'
 import { Link } from 'react-router'
 
-TweetActions.getAllTweets() // we need to invoke the action at the start
 
 // this getAppState returns the state of app. Thus we can call this function in our this.state and in _onChange's this.setState to set the initial state in every cycle
 let getAppState = () => {
@@ -21,6 +20,7 @@ export default class Index extends React.Component {
   }
 
   componentDidMount () {
+    TweetActions.getAllTweets() // we need to invoke the action at the start
     // Need to use componentDidMount to trigger the live load of tweets when the component is mounted
     // Essentially, "this.onChange" is passed into TweetStore's "addChangeListener" function
     TweetStore.addChangeListener(this._onChange)
