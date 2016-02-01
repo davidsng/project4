@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  # Rails automatically gives you the 7 routes with just "resources:followers". Do a rake routes to see all the routes
+  resources :followers do |r|
+    collection do
+      get "random"
+    end
+  end
+  
   root :to => 'home#index'
 
   get 'profile' => 'profile#index'
