@@ -1,45 +1,38 @@
 import TweetBox from './components/TweetBox'
 import TweetsList from './components/TweetsList'
+import TweetStore from './stores/TweetStore'
+import TweetActions from './actions/TweetActions'
 
-// let mockTweets = [
-//   { id: 1, name: 'David 1', body: 'I am happy'},
-//   { id: 2, name: 'David 2', body: 'I am joyful'},
-//   { id: 3, name: 'David 3', body: 'I am at peace'}
-// ]
+TweetActions.getAllTweets() // we need to invoke the action at the start
+
+// this getAppState returns the state of app. Thus we can call this function in our this.state and in _onChange's this.setState to set the initial state in every cycle
+let getAppState = () => {
+  return { tweetsList: TweetStore.getAll() }
+}
 
 class Main extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { tweetsList: [] }
+    this.state = getAppState()
+    this._onChange = this._onChange.bind(this)
   }
-  formattedTweets(tweetsList) {
-    let formattedList = tweetsList.map(tweet => {
-      tweet.formattedDate = moment(tweet.created_at).fromNow()
-      return tweet
-    })
-    return {
-      tweetsList: formattedList
-    }
-  }
-  addTweet(tweetToAdd) {
-    $.post('/tweets', { body: tweetToAdd })
-    .success(savedTweet => {
-      let newTweetsList = this.state.tweetsList
-      newTweetsList.unshift(savedTweet)
-      this.setState(this.formattedTweets(newTweetsList))
-    })
-    .error(error => console.log(error))
-  }
+
   componentDidMount () {
-      // Need to use componentDidMount to trigger the live load of tweets
-      $.ajax("/tweets")
-      .success(data => this.setState(this.formattedTweets(data))) // change the tweetList to the data we received from server
-      .error(error => console.log(error))
+    // Need to use componentDidMount to trigger the live load of tweets when the component is mounted
+    // Essentially, "this.onChange" is passed into TweetStore's "addChangeListener" function
+    TweetStore.addChangeListener(this._onChange)
+  }
+  componentWillUnmount(){
+    TweetStore.removeChangeListener(this._onChange)
+  }
+  _onChange() {
+    console.log(5, "Main.onChange")
+    this.setState(getAppState())
   }
   render () {
     return (
       <div className="container">
-        <TweetBox sendTweet={this.addTweet.bind(this)}/>
+        <TweetBox />
         <TweetsList tweets={this.state.tweetsList}/>
       </div>
     )
