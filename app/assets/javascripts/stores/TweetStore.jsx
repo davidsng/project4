@@ -1,28 +1,16 @@
 import AppDispatcher from '../dispatcher'
 import ActionTypes from '../constants'
-import { EventEmitter } from 'events'
+import AppEventEmitter from './AppEventEmitter'
 
 let _tweets = []
-const CHANGE_EVENT = 'CHANGE'
 
-class TweetEventEmitter extends EventEmitter {
+class TweetEventEmitter extends AppEventEmitter {
   getAll() {
       return _tweets.map(tweet => {
         // adds a new key value pair to each tweet for the time of the tweet
         tweet.formattedDate = moment(tweet.created_at).fromNow()
         return tweet
       })
-  }
-  emitChange() {
-    this.emit(CHANGE_EVENT)
-  }
-  addChangeListener(callback) {
-    // the view will supply the callback. This line says "we are listening to your change event, and here is what I want to do when that event happens"
-    this.on(CHANGE_EVENT, callback)
-  }
-  removeChangeListener(callback) {
-    // the view will supply the callback. This line says "we are listening to your change event, and here is what I want to do when that event happens"
-    this.removeListener(CHANGE_EVENT, callback)
   }
 }
 

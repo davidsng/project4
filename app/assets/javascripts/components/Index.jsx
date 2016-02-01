@@ -1,7 +1,10 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
 import TweetBox from './TweetBox'
 import TweetsList from './TweetsList'
 import TweetStore from '../stores/TweetStore'
 import TweetActions from '../actions/TweetActions'
+import { Link } from 'react-router'
 
 TweetActions.getAllTweets() // we need to invoke the action at the start
 
@@ -32,6 +35,7 @@ export default class Index extends React.Component {
   render () {
     return (
       <div className="container">
+        <Link to='/follow'>Who to follow</Link>
         <TweetBox />
         <TweetsList tweets={this.state.tweetsList}/>
       </div>
