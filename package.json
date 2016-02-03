@@ -7,7 +7,6 @@
     "test": "test"
   },
   "scripts": {
-    "postinstall": "npm install && webpack && bundle install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "David",
