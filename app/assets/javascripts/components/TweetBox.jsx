@@ -7,6 +7,7 @@ export default class TweetBox extends React.Component {
     event.preventDefault()
     TweetActions.sendTweet(this.refs.tweetTextArea.value)
     this.refs.tweetTextArea.value = ''
+    toastr.success('You just tweeted!')
   }
 
   render () {

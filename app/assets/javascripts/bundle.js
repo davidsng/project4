@@ -103,31 +103,6 @@
 	  return App;
 	}(_react2.default.Component);
 	
-	// var routes = (
-	//   <Route name='app' path='/' handler={require('./components/Index')}>
-	//     <Route name='follow' handler={require('./components/Follow')} />
-	//   </Route>
-	// )
-	//
-	// Router.run(routes, Router.HistoryLocation, function (Handler) {
-	//   React.render(<Handler/>, document.getElementById('react'))
-	// })
-	
-	// let documentReady = () => {
-	//   Router.run(routes, Router.HistoryLocation, function (Handler) {
-	//     ReactDOM.render(
-	//       <Router>
-	//         <Route component={App}>  // we need to insert this as react router requires another top level view component to manage which other component should be mounted based on the URL
-	//           <Route path='/' component={Index} />
-	//           <Route path='/follow' component={Follow} />
-	//         </Route>
-	//       </Router>
-	//       , document.getElementById('react'))
-	//     })}
-	//
-	//
-	// $(documentReady)
-	
 	var documentReady = function documentReady() {
 	  _reactDom2.default.render(_react2.default.createElement(
 	    _reactRouter.Router,
@@ -24230,6 +24205,7 @@
 	      event.preventDefault();
 	      _TweetActions2.default.sendTweet(this.refs.tweetTextArea.value);
 	      this.refs.tweetTextArea.value = '';
+	      toastr.success('You just tweeted!');
 	    }
 	  }, {
 	    key: 'render',
@@ -25394,6 +25370,7 @@
 	    key: 'followUser',
 	    value: function followUser(userId) {
 	      _UserActions2.default.followUser(userId);
+	      toastr.success('You are now following a new user!');
 	    }
 	  }, {
 	    key: 'followClasses',

@@ -30,6 +30,7 @@ export default class Follow extends React.Component {
   }
   followUser(userId) {
     UserActions.followUser(userId)
+    toastr.success('You are now following a new user!')
   }
   followClasses (following) {
     return "secondary-content btn-floating " + (following ? "green" : "grey")
