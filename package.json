@@ -7,7 +7,6 @@
     "test": "test"
   },
   "scripts": {
-    "start": "rails s",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "David",
