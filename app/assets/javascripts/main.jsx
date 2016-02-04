@@ -5,6 +5,7 @@ import Index from './components/Index'
 import Follow from './components/Follow'
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 
+window.React = React
 
 // if the route is '/', the component <Index /> will be inserted here
 

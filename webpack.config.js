@@ -13,8 +13,7 @@ module.exports = {
     loaders: [
       { test: /\.jsx$/, loader: 'babel-loader',
         query: { cacheDirectory: true, presets: ['react', 'es2015', 'stage-0'] },
-        // test: require.resolve('react'), loader: 'expose?React',
       }
-  ]
+    ]
 }
 };
