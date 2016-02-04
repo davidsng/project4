@@ -18,17 +18,8 @@ class App extends React.Component {
   }
 }
 
-// var ready = function () {
-//   React.renderComponent(
-//     <Comment author="Richard" comment="This is a comment "/>,
-//     document.getElementById('comments')
-//   );
-// };
-//
-// $(document).ready(ready);
-
 var ready = function () {
-    React.renderComponent(
+    React.render(
       <Router history={createBrowserHistory()}>
         <Route component={App}>  // we need to insert this as react router requires another top level view component to manage which other component should be mounted based on the URL
           <Route path='/' component={Index} history={browserHistory}/>
