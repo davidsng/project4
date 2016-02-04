@@ -6,8 +6,6 @@ gem 'devise'
 
 gem 'toastr-rails'
 
-gem "react_on_rails", "~> 2.0.0"
-
 gem 'react-rails', '~> 1.5.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
