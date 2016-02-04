@@ -1,4 +1,6 @@
-import React from 'react'
+// import React from 'react'
+var React = window.React = require('react')
+
 import ReactDOM from 'react-dom'
 import TweetBox from './TweetBox'
 import TweetsList from './TweetsList'

@@ -1,11 +1,10 @@
-import React from 'react'
+// import React from 'react'
+var React = window.React = require('react')
 import ReactDOM from 'react-dom'
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 import Index from './components/Index'
 import Follow from './components/Follow'
 import createBrowserHistory from 'history/lib/createBrowserHistory';
-
-window.React = React
 
 // if the route is '/', the component <Index /> will be inserted here
 

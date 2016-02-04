@@ -24067,10 +24067,6 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
 	var _reactDom = __webpack_require__(158);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
@@ -24100,6 +24096,9 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	// import React from 'react'
+	var React = window.React = __webpack_require__(1);
 	
 	// this getAppState returns the state of app. Thus we can call this function in our this.state and in _onChange's this.setState to set the initial state in every cycle
 	var getAppState = function getAppState() {
@@ -24141,22 +24140,22 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(
+	      return React.createElement(
 	        'div',
 	        { className: 'container' },
-	        _react2.default.createElement(
+	        React.createElement(
 	          _reactRouter.Link,
 	          { to: '/follow' },
 	          'Who to follow'
 	        ),
-	        _react2.default.createElement(_TweetBox2.default, null),
-	        _react2.default.createElement(_TweetsList2.default, { tweets: this.state.tweetsList })
+	        React.createElement(_TweetBox2.default, null),
+	        React.createElement(_TweetsList2.default, { tweets: this.state.tweetsList })
 	      );
 	    }
 	  }]);
 	
 	  return Index;
-	}(_react2.default.Component);
+	}(React.Component);
 	
 	exports.default = Index;
 
@@ -24172,10 +24171,6 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
 	var _reactDom = __webpack_require__(158);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
@@ -24190,7 +24185,9 @@
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // import React from 'react'
+	
+	var React = window.React = __webpack_require__(1);
 	
 	var TweetBox = function (_React$Component) {
 	  _inherits(TweetBox, _React$Component);
@@ -24212,22 +24209,22 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(
+	      return React.createElement(
 	        'div',
 	        { className: 'row' },
-	        _react2.default.createElement(
+	        React.createElement(
 	          'form',
 	          { onSubmit: this.sendTweet.bind(this) },
-	          _react2.default.createElement(
+	          React.createElement(
 	            'div',
 	            { className: 'input-field' },
-	            _react2.default.createElement('textarea', { ref: 'tweetTextArea', className: 'materialize-textarea' }),
-	            _react2.default.createElement(
+	            React.createElement('textarea', { ref: 'tweetTextArea', className: 'materialize-textarea' }),
+	            React.createElement(
 	              'label',
 	              null,
 	              'Say something!'
 	            ),
-	            _react2.default.createElement(
+	            React.createElement(
 	              'button',
 	              { type: 'submit', className: 'btn right' },
 	              'Post'
@@ -24239,7 +24236,7 @@
 	  }]);
 	
 	  return TweetBox;
-	}(_react2.default.Component);
+	}(React.Component);
 	
 	exports.default = TweetBox;
 
@@ -24727,10 +24724,6 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
 	var _reactDom = __webpack_require__(158);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
@@ -24745,7 +24738,9 @@
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // import React from 'react'
+	
+	var React = window.React = __webpack_require__(1);
 	
 	var TweetsList = function (_React$Component) {
 	  _inherits(TweetsList, _React$Component);
@@ -24760,12 +24755,12 @@
 	    key: 'render',
 	    value: function render() {
 	      var tweets = this.props.tweets.map(function (tweet) {
-	        return _react2.default.createElement(_Tweet2.default, _extends({ key: tweet.id }, tweet));
+	        return React.createElement(_Tweet2.default, _extends({ key: tweet.id }, tweet));
 	      });
-	      return _react2.default.createElement(
+	      return React.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(
+	        React.createElement(
 	          'ul',
 	          { className: 'collection' },
 	          tweets
@@ -24775,7 +24770,7 @@
 	  }]);
 	
 	  return TweetsList;
-	}(_react2.default.Component);
+	}(React.Component);
 	
 	exports.default = TweetsList;
 
@@ -24791,10 +24786,6 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
 	var _reactDom = __webpack_require__(158);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
@@ -24806,6 +24797,9 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	// import React from 'react'
+	var React = window.React = __webpack_require__(1);
 	
 	var Tweet = function (_React$Component) {
 	  _inherits(Tweet, _React$Component);
@@ -24819,29 +24813,29 @@
 	  _createClass(Tweet, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(
+	      return React.createElement(
 	        'li',
 	        { className: 'collection-item avatar' },
-	        _react2.default.createElement('img', { className: 'circle', src: this.props.gravatar }),
-	        _react2.default.createElement(
+	        React.createElement('img', { className: 'circle', src: this.props.gravatar }),
+	        React.createElement(
 	          'span',
 	          { className: 'title' },
 	          this.props.name
 	        ),
-	        _react2.default.createElement(
+	        React.createElement(
 	          'time',
 	          null,
 	          this.props.formattedDate
 	        ),
-	        _react2.default.createElement(
+	        React.createElement(
 	          'p',
 	          null,
 	          this.props.body
 	        ),
-	        _react2.default.createElement(
+	        React.createElement(
 	          'a',
 	          { href: '#!', className: 'secondary-content' },
-	          _react2.default.createElement(
+	          React.createElement(
 	            'i',
 	            { className: 'material-icons' },
 	            'grade'
@@ -24852,7 +24846,7 @@
 	  }]);
 	
 	  return Tweet;
-	}(_react2.default.Component);
+	}(React.Component);
 	
 	exports.default = Tweet;
 
@@ -25307,10 +25301,6 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
 	var _UserStore = __webpack_require__(222);
 	
 	var _UserStore2 = _interopRequireDefault(_UserStore);
@@ -25328,6 +25318,9 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	// import React from 'react'
+	var React = window.React = __webpack_require__(1);
 	
 	// a react component in a flux app always reads its state from the store
 	
@@ -25385,20 +25378,20 @@
 	      var _this2 = this;
 	
 	      var users = this.state.users.map(function (user) {
-	        return _react2.default.createElement(
+	        return React.createElement(
 	          'li',
 	          { key: user.id, className: 'collection-item avatar' },
-	          _react2.default.createElement('img', { src: user.gravatar, className: 'circle' }),
-	          _react2.default.createElement(
+	          React.createElement('img', { src: user.gravatar, className: 'circle' }),
+	          React.createElement(
 	            'span',
 	            { className: 'title' },
 	            user.name
 	          ),
-	          _react2.default.createElement(
+	          React.createElement(
 	            'a',
 	            { className: _this2.followClasses(user.following),
 	              onClick: _this2.followUser.bind(_this2, user.id) },
-	            _react2.default.createElement(
+	            React.createElement(
 	              'i',
 	              { className: 'material-icons' },
 	              'person_pin'
@@ -25406,20 +25399,20 @@
 	          )
 	        );
 	      });
-	      return _react2.default.createElement(
+	      return React.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(
+	        React.createElement(
 	          _reactRouter.Link,
 	          { to: '/' },
 	          'Back to main page'
 	        ),
-	        _react2.default.createElement(
+	        React.createElement(
 	          'h3',
 	          null,
 	          'Who to follow'
 	        ),
-	        _react2.default.createElement(
+	        React.createElement(
 	          'ul',
 	          { className: 'collection' },
 	          users
@@ -25429,7 +25422,7 @@
 	  }]);
 	
 	  return Follow;
-	}(_react2.default.Component);
+	}(React.Component);
 	
 	exports.default = Follow;
 

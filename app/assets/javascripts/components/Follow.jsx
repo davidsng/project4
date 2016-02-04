@@ -1,4 +1,6 @@
-import React from 'react'
+// import React from 'react'
+var React = window.React = require('react')
+
 import UserStore from '../stores/UserStore'
 import UserActions from '../actions/UserActions'
 import {Link} from 'react-router'

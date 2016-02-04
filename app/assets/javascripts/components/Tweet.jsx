@@ -1,4 +1,6 @@
-import React from 'react'
+// import React from 'react'
+var React = window.React = require('react')
+
 import ReactDOM from 'react-dom'
 
 export default class Tweet extends React.Component {
