@@ -10,11 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require react
+//= require react_ujs
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
 //= require_tree ./components
 //= require components
 //= require toastr
-//= require react
-//= require react_ujs
