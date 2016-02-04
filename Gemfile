@@ -6,7 +6,7 @@ gem 'devise'
 
 gem 'toastr-rails'
 
-gem "react_on_rails", "~> 2.0.0"
+# gem "react_on_rails", "~> 2.0.0"
 
 gem 'react-rails', '~> 1.5.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -51,7 +51,6 @@ group :development do
   gem 'spring'
 end
 
-gem 'rails_12factor'
-# , group: :production
+gem 'rails_12factor', group: :production
 
 ruby '2.2.1'
