@@ -16,3 +16,5 @@
 //= require_tree ./components
 //= require components
 //= require toastr
+//= require react
+//= require react_ujs
