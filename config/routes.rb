@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       get "random"
     end
   end
-  
+
   root :to => 'home#index'
 
   get 'profile' => 'profile#index'
